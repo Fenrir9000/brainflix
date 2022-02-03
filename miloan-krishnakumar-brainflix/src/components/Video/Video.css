@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+.video-thumbWrapper {
+  display: flex;
+  height: 250px;
+  background-color: black;
+}
+@media (min-width: 768px) {
+  .video-thumbWrapper {
+    height: 400px;
+  }
+}
+@media (min-width: 1280px) {
+  .video-thumbWrapper {
+    height: 500px;
+  }
+}
+.video__img {
+  min-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 768px) {
+  .video__img {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1280px) {
+  .video__img {
+    padding-left: 240px;
+    padding-right: 240px;
+  }
+}/*# sourceMappingURL=Video.css.map */

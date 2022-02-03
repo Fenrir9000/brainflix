@@ -1,0 +1,87 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin-left: $addsixteen * 5;
+  margin-right: $addsixteen;
+  margin-bottom: $addsixteen * 1.5;
+  position: relative;
+  @include tablet {
+    flex-direction: row;
+
+    justify-content: space-between;
+    margin-left: $addsixteen * 5.5;
+    margin-right: $addsixteen * 4;
+    margin-bottom: $addsixteen * 1.5;
+    height: $addsixteen * 3;
+  }
+  @include desktop {
+    margin-left: $addsixteen * 14;
+  }
+
+  &__mohan {
+    @include avatarLarge;
+    max-height: 100px;
+    max-width: 100px;
+    position: absolute;
+    background-image: url("../../assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
+    left: -$addsixteen * 4;
+    top: $addsixteen * 1;
+    @include tablet {
+      top: -$addsixteen * 0.2;
+    }
+  }
+  &__input {
+    resize: none;
+    height: 96px;
+    border: 2px solid $mercury;
+    border-radius: 5px;
+    background-color: $alabaster;
+    overflow: hidden;
+    padding-top: $addsixteen * 0.75;
+    padding-left: $addsixteen * 0.8;
+    @include tablet {
+      height: 100%;
+      width: 80%;
+      margin-bottom: 0;
+      margin-right: $addsixteen;
+    }
+    margin-bottom: $addsixteen;
+    &::placeholder {
+      color: $brainflix-black;
+      position: relative;
+      top: 2px;
+    }
+    &:focus {
+      outline: none;
+      border: 2px solid $brainflix-blue;
+    }
+  }
+  &__label {
+    @include mobile-h5-labels;
+    color: $mercury;
+    font-weight: 600;
+    @include tablet {
+      position: absolute;
+      bottom: $addsixteen * 3;
+    }
+  }
+
+  &__button {
+    height: $addsixteen * 3;
+    @include tablet {
+      height: 100%;
+      width: 20%;
+      margin-bottom: 0;
+      padding-top: 4px;
+      padding-left: $addsixteen * 4;
+      padding-right: $addsixteen * 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

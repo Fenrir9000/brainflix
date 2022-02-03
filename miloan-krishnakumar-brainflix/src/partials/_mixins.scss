@@ -1,0 +1,141 @@
+@use "./typography" as *;
+@use "./variables" as *;
+
+@mixin font-style($text-size, $line-height) {
+  font-size: $text-size;
+  line-height: $line-height;
+  @content;
+}
+
+@mixin font-family-normal {
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  @content;
+}
+
+@mixin font-family-bold {
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  @content;
+}
+
+@mixin font-family-bolder {
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  @content;
+}
+
+@mixin mobile-side-padding {
+  padding: 0 16px;
+  @content;
+}
+
+@mixin mobile-h1-header {
+  @include font-style(24px, 32px);
+  font-family: "Avenir";
+  @content;
+}
+@mixin mobile-h3-subheader {
+  @include font-style(14px, 22px);
+  font-family: "Avenir";
+  @content;
+}
+@mixin mobile-paragraphs-comments {
+  @include font-style(13px, 18px);
+  font-family: "Avenir";
+  @content;
+}
+@mixin mobile-lists-contacts {
+  @include font-style(13px, 20px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin mobile-h5-labels {
+  @include font-style(12px, 20px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin tablet-side-padding {
+  padding: 0 36px;
+  @content;
+}
+
+@mixin logo-style {
+  max-height: 20px;
+  max-width: 120px;
+  text-decoration: none;
+  color: $white;
+  @content;
+}
+
+@mixin avatarMobile {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  @content;
+}
+
+@mixin avatarLarge {
+  border-radius: 50%;
+  min-height: 48px;
+  min-width: 48px;
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-change) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-change) {
+    @content;
+  }
+}
+
+@mixin big-hero-header {
+  @include font-style(60px, 68px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin big-h1-header {
+  @include font-style(36px, 44px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin big-h2-header {
+  @include font-style(24px, 32px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin big-h3-subheader {
+  @include font-style(16px, 24px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin big-paragraphs-comments {
+  @include font-style(14px, 22px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin big-lists-contacts {
+  @include font-style(14px, 20px);
+  font-family: "Avenir";
+  @content;
+}
+
+@mixin big-h5-labels {
+  @include font-style(12px, 20px);
+  font-family: "Avenir";
+  @content;
+}

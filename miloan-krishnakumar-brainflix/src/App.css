@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  font-family: "Avenir Next", sans-serif;
+}
+
+button {
+  background-color: #0095ff;
+  color: white;
+  border-radius: 4px;
+  border: none;
+}
+button:hover {
+  background-color: #0065ad;
+}
+
+@media (min-width: 1280px) {
+  .halfPage {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .halfPage-left {
+    width: 60%;
+  }
+}/*# sourceMappingURL=App.css.map */

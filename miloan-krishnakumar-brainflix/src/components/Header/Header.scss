@@ -1,6 +1,11 @@
 @use "../../partials/mixins" as *;
 @use "../../partials/variables" as *;
 
+a {
+  text-decoration: none;
+  color: $white;
+}
+
 .header {
   background-color: white;
   display: flex;
@@ -10,6 +15,8 @@
   padding: $addsixteen;
 
   position: relative;
+  animation: 1s ease-out 0s 1 slideFromTop;
+
   @include tablet {
     flex-direction: row;
     justify-content: space-between;
@@ -94,20 +101,31 @@
   &__uploadImg {
     position: relative;
     right: 8px;
-    top: 1px;
+    bottom: 2px;
     @include tablet {
     }
   }
 
   &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     min-height: $addsixteen * 3;
-    background-repeat: no-repeat;
-    background-position: 25% 50%;
+
+    background-color: $brainflix-blue;
+
+    border-radius: 4px;
+    font-size: 13px;
+    border: none;
+
     @include tablet {
       margin-left: $addsixteen;
       width: 60%;
       flex-grow: 2;
+    }
+    &:hover {
+      background-color: $brainflix-darkblue;
     }
   }
 
@@ -116,8 +134,24 @@
     margin-left: $addsixteen;
     background-image: url("../../assets/Images/Mohan-muruge.jpg");
     background-size: cover;
+    transition: transform, 0.5s;
+    transition-timing-function: ease;
+
     @include tablet {
       margin-left: $addsixteen;
     }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

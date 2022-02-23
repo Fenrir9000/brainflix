@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -81,7 +81,7 @@
   align-items: flex-end;
   font-weight: 600;
 }
-.info-user__dataTwo {
+.info-user__data-two {
   color: #afafaf;
   display: flex;
   align-items: flex-end;
@@ -96,15 +96,23 @@
     padding-top: 0px;
   }
 }
-.info-social__viewIcon {
+.info-social__view-icon {
   position: relative;
   top: 3px;
   padding-right: 8px;
 }
-.info-social__likeIcon {
+.info-social__view-icon:hover {
+  transform: scale(1.1);
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+.info-social__like-icon {
   position: relative;
   top: 3px;
   padding-right: 8px;
+}
+.info-social__like-icon:hover {
+  transform: scale(1.1);
+  filter: invert(26%) sepia(76%) saturate(7471%) hue-rotate(355deg) brightness(99%) contrast(128%);
 }
 .info-social__likecount {
   padding-left: 32px;

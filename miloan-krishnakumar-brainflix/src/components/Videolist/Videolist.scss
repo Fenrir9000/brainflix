@@ -1,6 +1,9 @@
 @use "../../partials/mixins" as *;
 @use "../../partials/variables" as *;
 
+a {
+  display: inline-block;
+}
 .videoList {
   @include mobile-lists-contacts;
   display: flex;
@@ -34,7 +37,10 @@
     min-height: 100px;
     object-fit: cover;
     position: relative;
-
+    transition: transform, 1s;
+    &:hover {
+      transform: translateX(30px) scale(1.5) rotate(10deg);
+    }
     &--large {
       min-width: 340px;
       min-height: 220px;

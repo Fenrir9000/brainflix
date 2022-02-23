@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -16,6 +16,10 @@
   font-weight: 700;
   font-style: normal;
 }
+a {
+  display: inline-block;
+}
+
 .videoList {
   font-size: 13px;
   line-height: 20px;
@@ -61,6 +65,10 @@
   -o-object-fit: cover;
      object-fit: cover;
   position: relative;
+  transition: transform, 1s;
+}
+.videoList__thumbnail:hover {
+  transform: translateX(30px) scale(1.5) rotate(10deg);
 }
 .videoList__thumbnail--large {
   min-width: 340px;

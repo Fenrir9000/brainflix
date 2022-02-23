@@ -56,7 +56,7 @@
       font-weight: 600;
     }
 
-    &__dataTwo {
+    &__data-two {
       color: $silver;
       display: flex;
       align-items: flex-end;
@@ -71,16 +71,26 @@
       padding-top: 0px;
     }
 
-    &__viewIcon {
+    &__view-icon {
       position: relative;
       top: 3px;
       padding-right: 8px;
+      &:hover {
+        transform: scale(1.1);
+        filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+          brightness(118%) contrast(119%);
+      }
     }
 
-    &__likeIcon {
+    &__like-icon {
       position: relative;
       top: 3px;
       padding-right: 8px;
+      &:hover {
+        transform: scale(1.1);
+        filter: invert(26%) sepia(76%) saturate(7471%) hue-rotate(355deg)
+          brightness(99%) contrast(128%);
+      }
     }
 
     &__likecount {

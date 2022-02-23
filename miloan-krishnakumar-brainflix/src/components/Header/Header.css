@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Avenir Next";
+  font-family: "Avenir Next", sans-serif;
   src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -16,6 +16,11 @@
   font-weight: 700;
   font-style: normal;
 }
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .header {
   background-color: white;
   display: flex;
@@ -24,6 +29,8 @@
   justify-content: center;
   padding: 16px;
   position: relative;
+  -webkit-animation: 1s ease-out 0s 1 slideFromTop;
+          animation: 1s ease-out 0s 1 slideFromTop;
 }
 @media (min-width: 768px) {
   .header {
@@ -128,13 +135,18 @@
 .header__uploadImg {
   position: relative;
   right: 8px;
-  top: 1px;
+  bottom: 2px;
 }
 .header__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: 48px;
-  background-repeat: no-repeat;
-  background-position: 25% 50%;
+  background-color: #0095ff;
+  border-radius: 4px;
+  font-size: 13px;
+  border: none;
 }
 @media (min-width: 768px) {
   .header__button {
@@ -143,6 +155,9 @@
     flex-grow: 2;
   }
 }
+.header__button:hover {
+  background-color: #0065ad;
+}
 .header__mohan {
   border-radius: 50%;
   min-height: 48px;
@@ -150,9 +165,32 @@
   margin-left: 16px;
   background-image: url("../../assets/Images/Mohan-muruge.jpg");
   background-size: cover;
+  transition: transform, 0.5s;
+  transition-timing-function: ease;
 }
 @media (min-width: 768px) {
   .header__mohan {
     margin-left: 16px;
+  }
+}
+.header__mohan:hover {
+  transform: scale(1.1);
+}
+
+@-webkit-keyframes slideFromTop {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=Header.css.map */

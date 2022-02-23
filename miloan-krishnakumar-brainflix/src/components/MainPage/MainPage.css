@@ -16,38 +16,44 @@
   font-weight: 700;
   font-style: normal;
 }
-.video-thumbWrapper {
-  width: 100%;
-  height: auto;
+.App {
+  -webkit-animation: 0.8s ease-out 0s 1 slideFromBottomApp;
+          animation: 0.8s ease-out 0s 1 slideFromBottomApp;
+}
+
+@media (min-width: 1280px) {
+  .half-page {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .half-page-left {
+    width: 60%;
+  }
+}
+
+.load-screen {
+  font-size: 2.5rem;
+  padding-top: 2rem;
   display: flex;
-  max-height: 40vh;
-  background-color: black;
+  justify-content: center;
+  font-weight: 600;
 }
-@media (min-width: 768px) {
-  .video-thumbWrapper {
-    max-height: 60vh;
+
+@-webkit-keyframes slideFromBottomApp {
+  0% {
+    transform: translateY(0.3%);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
-@media (min-width: 1280px) {
-  .video-thumbWrapper {
-    max-height: 60vh;
+
+@keyframes slideFromBottomApp {
+  0% {
+    transform: translateY(0.3%);
   }
-}
-.video__img {
-  width: 100vw;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-@media (min-width: 768px) {
-  .video__img {
-    padding-left: 32px;
-    padding-right: 32px;
+  100% {
+    transform: translateY(0);
   }
-}
-@media (min-width: 1280px) {
-  .video__img {
-    padding-left: 240px;
-    padding-right: 240px;
-  }
-}/*# sourceMappingURL=Video.css.map */
+}/*# sourceMappingURL=MainPage.css.map */

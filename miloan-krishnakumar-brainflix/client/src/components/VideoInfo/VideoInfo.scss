@@ -1,0 +1,117 @@
+@use "../../partials/mixins" as *;
+@use "../../partials/variables" as *;
+
+.info {
+	@include mobile-paragraphs-comments;
+	display: flex;
+	flex-direction: column;
+	margin-left: $addsixteen;
+	margin-right: $addsixteen;
+	@include tablet {
+		@include big-paragraphs-comments;
+
+		margin-left: $addsixteen * 1.5;
+		margin-right: $addsixteen * 1.5;
+	}
+	@include desktop {
+		margin: 0;
+		padding-left: $addsixteen * 10;
+		padding-right: 0;
+	}
+	&__title {
+		@include mobile-h1-header;
+		padding-top: $addsixteen * 3;
+		align-self: flex-start;
+		@include desktop {
+			@include big-h1-header;
+		}
+	}
+
+	&-divider {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		border-bottom: 1px solid $mercury;
+		padding-top: $addsixteen;
+
+		padding-bottom: $addsixteen;
+		@include tablet {
+			justify-content: space-between;
+			flex-direction: row;
+			padding-right: $addsixteen * 2;
+		}
+		@include desktop {
+		}
+	}
+
+	&-user {
+		display: flex;
+		justify-content: flex-start;
+
+		margin-right: $addsixteen;
+		&__data {
+			margin-right: $addsixteen;
+			display: flex;
+			align-items: flex-end;
+			font-weight: 600;
+		}
+
+		&__data-two {
+			color: $silver;
+			display: flex;
+			align-items: flex-end;
+		}
+	}
+
+	&-social {
+		display: flex;
+		justify-content: flex-start;
+		padding-top: $addsixteen;
+		@include tablet {
+			padding-top: 0px;
+		}
+
+		&__view-icon {
+			position: relative;
+			top: 3px;
+			padding-right: 8px;
+			&:hover {
+				transform: scale(1.1);
+				filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+					brightness(118%) contrast(119%);
+			}
+		}
+
+		&__like-icon {
+			position: relative;
+			top: 3px;
+			padding-right: 8px;
+			&:hover {
+				transform: scale(1.1);
+				filter: invert(26%) sepia(76%) saturate(7471%) hue-rotate(355deg)
+					brightness(99%) contrast(128%);
+			}
+		}
+
+		&__likecount {
+			padding-left: $addsixteen * 2;
+		}
+	}
+
+	&__commentsnum {
+		@include mobile-h3-subheader;
+		margin-top: $addsixteen * 3;
+		margin-bottom: $addsixteen * 2;
+		font-weight: 600;
+	}
+
+	&__description {
+		padding-top: $addsixteen;
+		@include tablet {
+			width: 78%;
+		}
+		@include desktop {
+			width: 70%;
+		}
+	}
+}

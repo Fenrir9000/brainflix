@@ -1,0 +1,110 @@
+.main {
+  gap: 2rem 0px;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 25% 50% 25%;
+  height: 80vh;
+}
+.main__logo {
+  width: 12rem;
+  margin-left: 1rem;
+  position: relative;
+  top: 4px;
+  -webkit-animation: 1s ease-in 0s 1 appearSlowly;
+          animation: 1s ease-in 0s 1 appearSlowly;
+}
+.main-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  text-align: center;
+}
+.main-1__link {
+  color: white;
+  padding: 1rem 1rem;
+  margin-top: 1rem;
+  background-color: #0095ff;
+  border-radius: 4px;
+}
+.main-1__link:hover {
+  background-color: #0065ad;
+}
+.main-1__h2 {
+  padding: 2rem 0;
+  font-size: 1rem;
+}
+.main-color-1 {
+  background-color: skyblue;
+  -webkit-animation: 1s ease-out 0s 1 slideFromLeft;
+          animation: 1s ease-out 0s 1 slideFromLeft;
+}
+.main-color-2 {
+  background-color: lightgreen;
+  -webkit-animation: 1s ease-out 0s 1 slideFromRight;
+          animation: 1s ease-out 0s 1 slideFromRight;
+}
+.main-color-3 {
+  background-color: lightgoldenrodyellow;
+  -webkit-animation: 1s ease-out 0s 1 slideFromLeft;
+          animation: 1s ease-out 0s 1 slideFromLeft;
+}
+.main-color-4 {
+  background-color: lightsalmon;
+  -webkit-animation: 1s ease-out 0s 1 slideFromRight;
+          animation: 1s ease-out 0s 1 slideFromRight;
+}
+
+@-webkit-keyframes slideFromLeft {
+  0% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes slideFromRight {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@-webkit-keyframes appearSlowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appearSlowly {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=Home.css.map */

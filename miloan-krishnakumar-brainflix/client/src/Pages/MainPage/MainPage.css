@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next", sans-serif;
+  src: url("../assets/Fonts/AvenirNextProLT/Linotype - AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+.App {
+  -webkit-animation: 0.8s ease-out 0s 1 slideFromBottomApp;
+          animation: 0.8s ease-out 0s 1 slideFromBottomApp;
+}
+
+@media (min-width: 1280px) {
+  .half-page {
+    display: flex;
+  }
+}
+@media (min-width: 1280px) {
+  .half-page-left {
+    width: 60%;
+  }
+}
+
+.load-screen {
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+@-webkit-keyframes slideFromBottomApp {
+  0% {
+    transform: translateY(0.3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromBottomApp {
+  0% {
+    transform: translateY(0.3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=MainPage.css.map */
